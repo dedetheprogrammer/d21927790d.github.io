@@ -25,36 +25,153 @@ h1 {
     -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
 }
 
-.left-trim {
-    width: 35%;
-    height: 100%;
-    background-color: #000000DF;
-}
-
-.content-container {
-    width: 75%;
-    height: 70%;
+.main-interface {
+    width: 94%;
+    height: 90%;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     position: absolute;
-    left: 90%;
-    top: 90%;
-    -webkit-transform: translate(-90%, -90%);
-    transform: translate(-90%, -90%);
-    z-index: 1;
+    background-color: #000000DF;
     border-radius: 25px;
-    background-color: rgba(128, 128, 128, 0.211);
 }
 
-.main-title-container {
+.coming-soon-container {
+    top: 35%;
+    left: 47%;
+    -webkit-transform: translate(-50%, -35%);
+    transform: translate(-50%, -35%);
     padding: 5%;
     position: relative;
 }
 
-.main-title {
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    position: absolute;
+.coming-soon {
     font-family: "Quicksand";
     text-align: center;
+    font-size: 100px;
+    font-weight: 350px;
     color: white;
+}
+
+/* POINTS ANIMATION
+ * src: https://loading.io/css/
+ */
+.lds-ellipsis-container {
+    right: 21%;
+    top: 46%;
+    -webkit-transform: translate(-21%, -46%);
+    transform: translate(-21%, -46%);
+    position: absolute;
+}
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+
+/* LOADING ANIMATION. 
+ * src: https://loading.io/css/
+ */
+.lds-ripple-container {
+    left: 50%;
+    top: 60%;
+    -webkit-transform: translate(-50%, -60%);
+    transform: translate(-50%, -60%);
+    position: absolute;
+}
+
+.lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ripple div {
+    position: absolute;
+    border: 4px solid #fff;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+    0% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        top: 0px;
+        left: 0px;
+        width: 72px;
+        height: 72px;
+        opacity: 0;
+    }
 }
