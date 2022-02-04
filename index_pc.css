@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
-/*
- * Small (smaller than 640px).
- * Medium (641px to 1007px).
- * Large (1008px and larger).
- */
-
-
 html, body {
     margin: 0;
     padding: 0;
@@ -28,58 +21,31 @@ h1 {
 }
 
 .main-interface {
-    width: 100%;
-    height: 100%;
+    width: 94%;
+    height: 90%;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     position: absolute;
-    animation: bg-color ease-in-out 15s infinite;
+    background-color: #000000DF;
+    border-radius: 25px;
 }
 
-@keyframes bg-color {
-    0% {
-        background-color: #000000DF;
-    }
-    20% {
-        background-color: #1e121dce;
-    }
-    40% {
-        background-color: #0e1819d4;
-    }
-    60% {
-        background-color: #3b1800aa;
-    }
-    65% {
-        background-color: #6f140baa;
-    }
-    80% {
-        background-color: #4f7535aa;
-    }
-    100% {
-        background-color: #000000DF;
-    }
-  }
-
-.msg-container {
-    top: 40%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -40%);
-    transform: translate(-50%, -40%);
+.coming-soon-container {
+    top: 35%;
+    left: 47%;
+    -webkit-transform: translate(-50%, -35%);
+    transform: translate(-50%, -35%);
     padding: 5%;
     position: relative;
-}
-
-.wip {
-    font-family: "Quicksand";
-    text-align: center;
-    text-shadow: 10px 5px 10px #000000;
-    font-size: 50px;
-    color: rgba(255, 255, 255, 0.775);
 }
 
 .coming-soon {
     font-family: "Quicksand";
     text-align: center;
-    text-shadow: 10px 5px 10px #000000;
-    font-size: 150px;
+    font-size: 100px;
+    font-weight: 350px;
     color: white;
 }
 
@@ -163,17 +129,17 @@ h1 {
  */
 .lds-ripple-container {
     left: 50%;
-    bottom: 7%;
-    -webkit-transform: translate(-50%, -7%);
-    transform: translate(-50%, -7%);
+    top: 60%;
+    -webkit-transform: translate(-50%, -60%);
+    transform: translate(-50%, -60%);
     position: absolute;
 }
 
 .lds-ripple {
     display: inline-block;
     position: relative;
-    width: 320px;
-    height: 320px;
+    width: 80px;
+    height: 80px;
 }
 
 .lds-ripple div {
@@ -190,18 +156,17 @@ h1 {
 
 @keyframes lds-ripple {
     0% {
-        top: 150px;
-        left: 150px;
+        top: 36px;
+        left: 36px;
         width: 0;
         height: 0;
         opacity: 1;
     }
-
     100% {
         top: 0px;
         left: 0px;
-        width: 300px;
-        height: 300px;
+        width: 72px;
+        height: 72px;
         opacity: 0;
     }
 }
