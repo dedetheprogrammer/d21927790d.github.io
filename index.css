@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
-/*
- * Small (smaller than 640px).
- * Medium (641px to 1007px).
- * Large (1008px and larger).
- */
-
-
 html, body {
     margin: 0;
     padding: 0;
@@ -56,7 +49,7 @@ h1 {
     100% {
         background-color: #000000DF;
     }
-  }
+}
 
 .msg-container {
     top: 40%;
@@ -207,20 +200,67 @@ h1 {
 }
 
 /* RESPONSIVE SIZES */
-@media (min-width:481px)  { 
-    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
-}
+@media only screen and (min-width:641px)  {  
+    .msg-container {
+        top: 30%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -30%);
+        transform: translate(-50%, -30%);
+        padding: 5%;
+        position: relative;
+    }
+    
+    .wip {
+        font-family: "Quicksand";
+        text-align: center;
+        text-shadow: 10px 5px 10px #000000;
+        font-size: 30px;
+        color: rgba(255, 255, 255, 0.775);
+    }
+    
+    .coming-soon {
+        font-family: "Quicksand";
+        text-align: center;
+        text-shadow: 10px 5px 10px #000000;
+        font-size: 100px;
+        color: white;
+    }
 
-@media (min-width:641px)  { 
-    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
-}
+    .lds-ripple-container {
+        left: 50%;
+        bottom: 10%;
+        -webkit-transform: translate(-50%, -10%);
+        transform: translate(-50%, -10%);
+        position: absolute;
+    }
 
-@media (min-width:961px)  { 
-    /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+    .lds-ripple {
+        display: inline-block;
+        position: relative;
+        width: 200px;
+        height: 200px;
+    }
+
+    @keyframes lds-ripple {
+        0% {
+            top: 96px;
+            left: 96px;
+            width: 0;
+            height: 0;
+            opacity: 1;
+        }
+    
+        100% {
+            top: 0px;
+            left: 0px;
+            width: 192px;
+            height: 192px;
+            opacity: 0;
+        }
+    }
 }
 
 @media only screen and (min-width:1008px) { 
-    /* big landscape tablets, laptops, and desktops */
     .msg-container {
         top: 45%;
         left: 50%;
@@ -278,5 +318,4 @@ h1 {
             opacity: 0;
         }
     }
-
 }
