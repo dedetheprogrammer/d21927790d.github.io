@@ -55,103 +55,29 @@ h1 {
 }
 
 .msg-container {
-    top: 40%;
+    top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -40%);
-    transform: translate(-50%, -40%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     padding: 5%;
     position: relative;
-}
-
-.tip-msg {
-    font-family: "Quicksand";
-    text-align: center;
-    text-shadow: 10px 5px 10px #000000;
-    font-size: 50px;
-    color: rgba(255, 255, 255, 0.775);
 }
 
 .coming-soon {
     font-family: "Quicksand";
     text-align: center;
     text-shadow: 10px 5px 10px #000000;
-    font-size: 150px;
+    font-size: 40px;
     color: white;
 }
 
-/* POINTS ANIMATION
- * src: https://loading.io/css/
- */
-.lds-ellipsis-container {
-    right: 21%;
-    top: 46%;
-    -webkit-transform: translate(-21%, -46%);
-    transform: translate(-21%, -46%);
-    position: absolute;
-}
-
-.lds-ellipsis {
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 80px;
-}
-
-.lds-ellipsis div {
-    position: absolute;
-    top: 33px;
-    width: 13px;
-    height: 13px;
-    border-radius: 50%;
-    background: #fff;
-    animation-timing-function: cubic-bezier(0, 1, 1, 0);
-}
-
-.lds-ellipsis div:nth-child(1) {
-    left: 8px;
-    animation: lds-ellipsis1 0.6s infinite;
-}
-
-.lds-ellipsis div:nth-child(2) {
-    left: 8px;
-    animation: lds-ellipsis2 0.6s infinite;
-}
-
-.lds-ellipsis div:nth-child(3) {
-    left: 32px;
-    animation: lds-ellipsis2 0.6s infinite;
-}
-
-.lds-ellipsis div:nth-child(4) {
-    left: 56px;
-    animation: lds-ellipsis3 0.6s infinite;
-}
-
-@keyframes lds-ellipsis1 {
-    0% {
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes lds-ellipsis3 {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(0);
-    }
-}
-
-@keyframes lds-ellipsis2 {
-    0% {
-        transform: translate(0, 0);
-    }
-    100% {
-        transform: translate(24px, 0);
-    }
+.tip-msg {
+    height: 20px;
+    font-family: "Quicksand";
+    text-align: center;
+    text-shadow: 10px 5px 10px #000000;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.775);
 }
 
 /* LOADING ANIMATION. 
@@ -168,8 +94,8 @@ h1 {
 .lds-ripple {
     display: inline-block;
     position: relative;
-    width: 320px;
-    height: 320px;
+    width: 100px;
+    height: 100px;
 }
 
 .lds-ripple div {
@@ -186,8 +112,8 @@ h1 {
 
 @keyframes lds-ripple {
     0% {
-        top: 150px;
-        left: 150px;
+        top: 46px;
+        left: 46px;
         width: 0;
         height: 0;
         opacity: 1;
@@ -196,38 +122,33 @@ h1 {
     100% {
         top: 0px;
         left: 0px;
-        width: 300px;
-        height: 300px;
+        width: 92px;
+        height: 92px;
         opacity: 0;
     }
 }
 
+
 /* RESPONSIVE SIZES */
-@media only screen and (min-width:641px)  {  
-    .msg-container {
-        top: 30%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -30%);
-        transform: translate(-50%, -30%);
-        padding: 5%;
-        position: relative;
-    }
-    
-    .tip-msg {
-        font-family: "Quicksand";
-        text-align: center;
-        text-shadow: 10px 5px 10px #000000;
-        font-size: 30px;
-        color: rgba(255, 255, 255, 0.775);
-    }
-    
+@media (min-width:641px) and (max-width:1007px)  {  
+
     .coming-soon {
         font-family: "Quicksand";
         text-align: center;
         text-shadow: 10px 5px 10px #000000;
-        font-size: 100px;
+        font-size: 45px;
         color: white;
     }
+
+    .tip-msg {
+        font-family: "Quicksand";
+        text-align: center;
+        text-shadow: 10px 5px 10px #000000;
+        font-size: 15px;
+        color: rgba(255, 255, 255, 0.775);
+    }
+    
+
 
     .lds-ripple-container {
         left: 50%;
@@ -240,14 +161,14 @@ h1 {
     .lds-ripple {
         display: inline-block;
         position: relative;
-        width: 200px;
-        height: 200px;
+        width: 120px;
+        height: 120px;
     }
 
     @keyframes lds-ripple {
         0% {
-            top: 96px;
-            left: 96px;
+            top: 56px;
+            left: 56px;
             width: 0;
             height: 0;
             opacity: 1;
@@ -256,28 +177,20 @@ h1 {
         100% {
             top: 0px;
             left: 0px;
-            width: 192px;
-            height: 192px;
+            width: 112px;
+            height: 112px;
             opacity: 0;
         }
     }
 }
 
-@media only screen and (min-width:1008px) { 
-    .msg-container {
-        top: 45%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -45%);
-        transform: translate(-50%, -45%);
-        padding: 5%;
-        position: relative;
-    }
+@media (min-width:1008px) { 
     
     .tip-msg {
         font-family: "Quicksand";
         text-align: center;
         text-shadow: 10px 5px 10px #000000;
-        font-size: 15px;
+        font-size: 10px;
         color: rgba(255, 255, 255, 0.775);
     }
     
@@ -285,7 +198,7 @@ h1 {
         font-family: "Quicksand";
         text-align: center;
         text-shadow: 10px 5px 10px #000000;
-        font-size: 50px;
+        font-size: 40px;
         color: white;
     }
 
