@@ -31,6 +31,9 @@ h1 {
     0% {
         background-color: #000000DF;
     }
+    10% {
+        background-color: #141525ce;
+    }
     20% {
         background-color: #1e121dce;
     }
@@ -44,7 +47,7 @@ h1 {
         background-color: #6f140baa;
     }
     80% {
-        background-color: #4f7535aa;
+        background-color: #3d4f31aa;
     }
     100% {
         background-color: #000000DF;

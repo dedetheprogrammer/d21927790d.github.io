@@ -22,6 +22,5 @@ $(document).ready(function(){
             element.text(r_text[Math.floor((Math.random() * r_text.length))]);
             element.fadeIn(1000);
         });
-        
     }, 10000);
 });
